@@ -2,6 +2,7 @@
 using Commandos;
 using System.Collections.Generic;
 using System;
+using System.Security.Principal;
 
 internal class Game
 {
@@ -29,7 +30,7 @@ internal class Game
         commandFactory.CreateCommand("command");
         commandFactory.CreateCommand("aircommand");
 
-        weaponFactory.CreateWeapon("gun");
+        weaponFactory.CreateWeapon("m16");
         weaponFactory.CreateWeapon("knife");
 
         enemyFactory.CreateEnemy("Ali");
@@ -50,7 +51,9 @@ internal class Game
                 ListEnemies();
                 break;
             case "2":
-                AttackEnemy();
+                Console.WriteLine("enter enemy number to attack");
+                int choice = (int.Parse(Console.ReadLine()));
+                AttackEnemy(choice);
                 break;
             case "3":
                 return;
@@ -70,12 +73,12 @@ internal class Game
         }
     }
 
-    private void AttackEnemy()
+    private void AttackEnemy(int choice)
     {
         if (commands.Count == 0 || enemies.Count == 0) return;
 
         var attacker = commands[0];
-        var target = enemies[0];
+        var target = enemies[choice];
 
         attacker.Attack();
         target.TakeDamage(40);

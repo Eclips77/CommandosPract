@@ -11,7 +11,7 @@ namespace Commandos.Weapons
     internal class Gun : IWeapon, IShootable
     {
         public string Name { get; set; }
-        public int Ammo { get;}
+        public int Ammo { get; set; }
         string Producer;
         public Gun(string name,int ammo,string producer)
         {

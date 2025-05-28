@@ -68,8 +68,8 @@ namespace Commandos
 
         public CommandsFactory()
         {
-            Register("commando", () => new Commando("Golani", "G-01"));
-            Register("air", () => new AirCommando("Eagle", "A-01"));
+            Register("command", () => new Commando("Golani", "G-01"));
+            Register("aircommand", () => new AirCommando("Eagle", "A-01"));
             Register("sea", () => new SeaCommando("Shayetet", "S-01"));
         }
 

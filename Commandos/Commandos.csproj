@@ -62,7 +62,6 @@
     <Compile Include="Weapons\Knife.cs" />
     <Compile Include="Weapons\Gun.cs" />
     <Compile Include="Weapons\Stone.cs" />
-    <Compile Include="Weapons\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
