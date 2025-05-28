@@ -3,6 +3,5 @@
     public interface IShootable 
     {
         int Ammo { get; }
-        void Shoot();
     }
 }

@@ -3,6 +3,5 @@
     public interface IBreakable
     {
         bool IsBroken { get; }
-        void Hit();
     }
 }

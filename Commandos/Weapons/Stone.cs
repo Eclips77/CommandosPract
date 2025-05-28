@@ -22,7 +22,7 @@ namespace Commandos.Weapons
             this.CurrentHits = 0;
         }
 
-        public void Hit()
+        public void Attack()
         {
             if (!IsBroken)
             {

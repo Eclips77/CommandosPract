@@ -25,7 +25,7 @@ namespace Commandos.Weapons
             //this.CurrentHits = 0;
         }
 
-        public void Hit()
+        public void Attack()
         {
             if (!this.IsBroken)
             {
@@ -42,5 +42,6 @@ namespace Commandos.Weapons
                 Console.WriteLine($"{this.Name} is already broken.");
             }
         }
+
     }
 }

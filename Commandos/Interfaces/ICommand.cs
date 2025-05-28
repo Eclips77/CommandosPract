@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Commandos.Interfaces
 {
-    internal interface ICommand
+    public interface ICommand
     {
         string CodeName { get; set; }
+        IWeapon Weapon { get;}
+        void EquipWeapon(IWeapon weapon);
         void Attack();
     }
 }

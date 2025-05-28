@@ -19,7 +19,7 @@ namespace Commandos.Weapons
             this.Ammo = ammo;
             this.Producer = producer;
         }
-        public void Shoot()
+        public void Attack()
         {
             if (Ammo > 0)
             {
