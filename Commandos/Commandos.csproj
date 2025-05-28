@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AiData.cs" />
     <Compile Include="Command\AirCommando.cs" />
     <Compile Include="Command\Commando.cs" />
     <Compile Include="Enemy.cs" />

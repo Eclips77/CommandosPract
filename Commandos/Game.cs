@@ -10,9 +10,9 @@ internal class Game
     private WeaponFactory weaponFactory = new WeaponFactory();
     private EnemyFactory enemyFactory = new EnemyFactory();
 
-    private List<ICommand> commands;
-    private List<IWeapon> weapons;
-    private List<Enemy> enemies;
+    private List<ICommand> commandsList;
+    private List<IWeapon> weaponsList;
+    private List<Enemy> enemiesList;
 
     public void Run()
     {
@@ -23,9 +23,9 @@ internal class Game
 
     private void InitializeGame()
     {
-        commands = commandFactory.GetAllCommands();
-        weapons = weaponFactory.GetAllWeapons();
-        enemies = enemyFactory.GetAllEnemies();
+        commandsList = commandFactory.GetAllCommands();
+        weaponsList = weaponFactory.GetAllWeapons();
+        enemiesList = enemyFactory.GetAllEnemies();
 
         commandFactory.CreateCommand("command");
         commandFactory.CreateCommand("aircommand");
@@ -67,7 +67,7 @@ internal class Game
 
     private void ListEnemies()
     {
-        foreach (var enemy in enemies)
+        foreach (var enemy in enemiesList)
         {
             Console.WriteLine($"{enemy.Name} - Health: {enemy.Health} - Alive: {enemy.IsAlive}");
         }
@@ -75,10 +75,10 @@ internal class Game
 
     private void AttackEnemy(int choice)
     {
-        if (commands.Count == 0 || enemies.Count == 0) return;
+        if (commandsList.Count == 0 || enemiesList.Count == 0) return;
 
-        var attacker = commands[0];
-        var target = enemies[choice];
+        var attacker = commandsList[0];
+        var target = enemiesList[choice];
 
         attacker.Attack();
         target.TakeDamage(40);

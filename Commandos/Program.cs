@@ -10,6 +10,12 @@ namespace Commandos
     {
         static void Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                Console.WriteLine("You must pass the API key as a command line argument");
+                return;
+            }
+            string apiKey = args[0];
             Game game = new Game();
             game.Run();
         }
