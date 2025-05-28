@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Commandos.Interfaces;
 
 namespace Commandos
 {
-    public  class Commando
+    public  class Commando : ICommand
     {
-        protected  string Name;
+        public string Name { get; set; }
         public string CodeName { get; set; }
         public string[] Tools = {"hammer","chisel","rope","bag","water"};
         string Status = "standing";
@@ -45,8 +46,6 @@ namespace Commandos
                 Console.WriteLine("eccses deined!");
             }
         }
-
-
 
     }
 }
